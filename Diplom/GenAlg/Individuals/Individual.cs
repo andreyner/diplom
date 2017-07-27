@@ -9,9 +9,9 @@ namespace Diplom.Individuals
 {
    public  class Individual<T>
    {
-      public  Individual(int size)
+      public  Individual(int countGen)
        {
-           genes = new List<Gen<T>>(size);
+           genes = new List<Gen<T>>(countGen);
 
        }
        public List<Gen<T>> genes { get; set; }

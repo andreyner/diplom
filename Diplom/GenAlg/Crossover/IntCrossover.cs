@@ -7,8 +7,15 @@ using System.Threading.Tasks;
 
 namespace Diplom.GenAlg.Cossover
 {
-    class IntCrossover
+   public class IntCrossover : Crossover<int>
     {
-       
+        public IntCrossover(ref List<Individual<int>> individual) : base(ref individual)
+        {
+
+        }
+        public override List<Individual<int>> CrossoverStart()
+        {
+            return individual;
+        }
     }
 }
