@@ -10,13 +10,13 @@ using Diplom.GenAlg.Cossover;
 
 namespace Diplom.GenAlg
 {
-    class Start
+    public class Start
     {
-
+        public Generator generator;
         //List<Individual<object>> generation;
         //int sizeIndividual;
         //int countGen;
-        //Generator generator;
+      
         //void initialization()
         //{
         //    generation = new List<Individual<object>>();

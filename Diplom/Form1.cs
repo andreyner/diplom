@@ -16,20 +16,23 @@ namespace Diplom
     {
         public Form1()
         {
-            
-
-
-
+            InitializeComponent();
         }
 
         private void tabPage2_Click(object sender, EventArgs e)
         {
 
         }
-       
+        Start run;
         private void button1_Click(object sender, EventArgs e)
         {
-
+            run = new Start();
+            switch (typecoding.SelectedIndex)
+            {
+                case 0: run.generator = new GeneratorInt(Convert.ToInt32(xmin.Text), Convert.ToInt32(xmax.Text)); break;
+                case 1: run.generator = new GeneratorDouble(Convert.ToDouble(xmin.Text), Convert.ToDouble(xmax.Text)); break;
+            }
+            
         }
     }
 }

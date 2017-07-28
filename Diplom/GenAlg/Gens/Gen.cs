@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Diplom.Gens
 {
-    public class Gen<T> 
+    public class Gen 
     {
-        public T value { get; set; }
+        public object value { get; set; }
     }
 }
