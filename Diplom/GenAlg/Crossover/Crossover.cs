@@ -7,15 +7,15 @@ using System.Threading.Tasks;
 
 namespace Diplom.GenAlg
 {
-    public abstract class Crossover<T>
+    public abstract class Crossover
     {
 
-        public List<Individual<T>> individual { private set; get; }
-        public Crossover(ref List<Individual<T>> individual)
-        {
-            this.individual = individual;
-        }
+        //public List<Individual<T>> individual { private set; get; }
+        //public Crossover(ref List<Individual<T>> individual)
+        //{
+        //    this.individual = individual;
+        //}
 
-        public abstract List<Individual<T>> CrossoverStart();
+        //public abstract List<Individual<T>> CrossoverStart();
     }
 }

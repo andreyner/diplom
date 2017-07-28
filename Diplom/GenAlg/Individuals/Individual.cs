@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 using Diplom.Gens;
 namespace Diplom.Individuals
 {
-   public  class Individual<T>
+   public  class Individual
    {
       public  Individual(int countGen)
        {
-           genes = new List<Gen<T>>(countGen);
+           genes = new ArrayList(countGen);
 
        }
-       public List<Gen<T>> genes { get; set; }
+      public ArrayList genes { get; set; }
 
    }
 }

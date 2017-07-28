@@ -32,7 +32,9 @@
             this.GenAlg = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.button1 = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
+            this.GenAlg.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -47,6 +49,7 @@
             // 
             // GenAlg
             // 
+            this.GenAlg.Controls.Add(this.comboBox1);
             this.GenAlg.Location = new System.Drawing.Point(4, 22);
             this.GenAlg.Name = "GenAlg";
             this.GenAlg.Padding = new System.Windows.Forms.Padding(3);
@@ -76,6 +79,19 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // comboBox1
+            // 
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Целочисленное",
+            "Вещественное"});
+            this.comboBox1.Location = new System.Drawing.Point(589, 459);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(187, 28);
+            this.comboBox1.TabIndex = 0;
+            this.comboBox1.Text = "Тип кодирования";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -86,6 +102,7 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.tabControl1.ResumeLayout(false);
+            this.GenAlg.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -96,6 +113,7 @@
         private System.Windows.Forms.TabPage GenAlg;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
 
