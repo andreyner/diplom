@@ -10,13 +10,13 @@ namespace Diplom.GenAlg.Generation
 {
     class GeneratorDouble:Generator
     {
-       public  GeneratorDouble(double xmin,double xmax)
-            : base(xmin, xmax)
+       public  GeneratorDouble(double xmin,double xmax, int sizeIndivid, int sizeGen)
+            : base(xmin, xmax, sizeIndivid, sizeGen)
         { 
         
         }
 
-        public override void generation()
+        protected override void generation(int sizeIndivid, int sizeGen)
         {
             Random rnd = new Random();
 
@@ -27,7 +27,7 @@ namespace Diplom.GenAlg.Generation
                     gen.value = rnd.NextDouble() + rnd.Next(Convert.ToInt32(min), Convert.ToInt32(max) - 1);
                 }
             }
-          
+
         }
     }
 }

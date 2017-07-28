@@ -11,10 +11,10 @@ namespace Diplom.Individuals
    {
       public  Individual(int countGen)
        {
-           genes = new ArrayList(countGen);
+           genes = new List<Gen>(countGen);
 
        }
-      public ArrayList genes { get; set; }
+      public List <Gen>genes { get; set; }
 
    }
 }

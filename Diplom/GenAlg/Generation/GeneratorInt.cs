@@ -11,12 +11,12 @@ namespace Diplom.GenAlg.Generation
     class GeneratorInt:Generator
     {
 
-       public   GeneratorInt(int xmin,int xmax)
-            : base(xmin, xmax)
-        { 
-        
+       public   GeneratorInt(int xmin,int xmax, int sizeIndivid, int sizeGen)
+            : base(xmin, xmax, sizeIndivid, sizeGen)
+        {
+           
         }
-        public override void generation()
+        protected override void generation(int sizeIndivid, int sizeGen)
         {
             Random rnd = new Random();
 

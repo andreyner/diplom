@@ -53,8 +53,6 @@
     <Compile Include="GenAlg\Crossover\DoubleCrossover.cs" />
     <Compile Include="GenAlg\Crossover\IntCrossover.cs" />
     <Compile Include="GenAlg\Generation\Generator.cs" />
-    <Compile Include="GenAlg\Generation\GeneratorDouble.cs" />
-    <Compile Include="GenAlg\Generation\GeneratorInt.cs" />
     <Compile Include="GenAlg\GenOperators.cs" />
     <Compile Include="GenAlg\Gens\Gen.cs" />
     <Compile Include="GenAlg\Crossover\Crossover.cs" />

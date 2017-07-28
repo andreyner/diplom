@@ -27,11 +27,19 @@ namespace Diplom
         private void button1_Click(object sender, EventArgs e)
         {
             run = new Start();
-            switch (typecoding.SelectedIndex)
+            double[] Xmin = new double[Convert.ToInt32(Gen.Value)];
+            double[] Xmax = new double[Convert.ToInt32(Gen.Value)];
+            for (int i = 0; i < Convert.ToInt32(Gen.Value); i++)
             {
-                case 0: run.generator = new GeneratorInt(Convert.ToInt32(xmin.Text), Convert.ToInt32(xmax.Text)); break;
-                case 1: run.generator = new GeneratorDouble(Convert.ToDouble(xmin.Text), Convert.ToDouble(xmax.Text)); break;
+                Xmin[i] = Convert.ToDouble(xmin.Text);
+                Xmax[i] = Convert.ToDouble(xmax.Text);
             }
+            run.generator = new Generator(Xmin, Xmax,Convert.ToInt32(Individ.Value), Convert.ToInt32(Gen.Value));
+            //switch (typecoding.SelectedIndex)
+            //{
+            //    case 0: run.generator = new GeneratorInt(Convert.ToInt32(xmin.Text), Convert.ToInt32(xmax.Text)); break;
+            //    case 1: run.generator = new GeneratorDouble(Convert.ToDouble(xmin.Text), Convert.ToDouble(xmax.Text)); break;
+            //}
             
         }
     }
