@@ -13,6 +13,10 @@ namespace Diplom.Gens
     public class Gen 
     {
         /// <summary>
+        /// разрядность гена
+        /// </summary>
+        public static int length;
+        /// <summary>
         /// минимальное значение параметра
         /// </summary>
         public double xmin;
@@ -21,29 +25,47 @@ namespace Diplom.Gens
         /// </summary>
        public  double xmax;
         /// <summary>
-        /// фенотип genvalu
+        /// фенотип genvalue,раскодированное значение
         /// </summary>
-        public double phenotype { get; set; }
+        private double phenotype { get; set; }
+        /// <summary>
+        /// закодированное значение фенотипа
+        /// </summary>
         private int genvalue;
         /// <summary>
-        /// исходное значение гена
+        /// фенотип,раскодированное значение
         /// </summary>
-        public int Genvalue
-        {   get
+        public double Phenotype
+        {
+            get
             {
-                return genvalue;
+                return phenotype;
             }
             set
             {
-                genvalue = value;
-                bgenvalue = new BitArray(new int[] {genvalue});
+                phenotype = value;
+                double notrounding = (Math.Round((phenotype - xmin) * (Math.Pow(2, Convert.ToDouble(length)) - 1)) / (xmax - xmin));
+                if (notrounding > 0)//округляем положительне числа в меньшую сторону,отицительные в большую
+                {
+
+                    notrounding = Math.Floor(notrounding);
+                }
+                else {
+                    if (notrounding < 0)
+                    {
+                        notrounding = Math.Ceiling(notrounding);
+                    }
+                }
+                genvalue = Convert.ToInt32(notrounding);
+                bgenvalue = new BitArray(new int[] { genvalue });        
+                bgenvalue.Length = length;
+
 
             }
-
         }
         /// <summary>
         /// двоичное предствление genvalue
         /// </summary>
-        BitArray bgenvalue;
+       public BitArray bgenvalue;
     }
 }

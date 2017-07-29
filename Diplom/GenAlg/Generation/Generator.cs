@@ -10,14 +10,14 @@ namespace Diplom.GenAlg.Generation
 {
     public  class Generator
     {
-       protected List<Individual> individuals {get; set;}
+       private List<Individual> individuals {get; set;}
        public  Generator(double []min,double [] max, int sizeIndivid, int sizeGen)
         {
             
             this.sizeGen = sizeGen;
             this.sizeIndivid = sizeIndivid;
-             allocationMemory(ref min,ref max);
-             generation( sizeIndivid, sizeGen);
+            allocationMemory(ref min,ref max);
+            
         }
        int sizeIndivid;
        int sizeGen;
@@ -26,7 +26,7 @@ namespace Diplom.GenAlg.Generation
         /// </summary>
         /// <param name="sizeIndivid"> количество особей</param>
         /// <param name="sizeGen">количество генов у одной особи</param>
-         protected void generation(int sizeIndivid, int sizeGen)
+         public List<Individual> generation()
         {
             Random rnd = new Random();
 
@@ -34,9 +34,10 @@ namespace Diplom.GenAlg.Generation
             {
                 foreach (Gen gen in Individ.genes)
                 {
-                    gen.Genvalue =  rnd.Next(Convert.ToInt32(gen.xmin), Convert.ToInt32(gen.xmax));
+                    gen.Phenotype =  rnd.Next(Convert.ToInt32(gen.xmin), Convert.ToInt32(gen.xmax));
                 }
             }
+            return individuals;
         }
         /// <summary>
         /// Выделение памяти под особей и гены,заполнение полей генов и особей начальыми значениями
