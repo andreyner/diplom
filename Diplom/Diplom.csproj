@@ -55,6 +55,8 @@
     <Compile Include="GenAlg\Gens\Gen.cs" />
     <Compile Include="GenAlg\Crossover\Crossovers.cs" />
     <Compile Include="GenAlg\Individuals\Individual.cs" />
+    <Compile Include="GenAlg\Mutation\Bit_Mutation.cs" />
+    <Compile Include="GenAlg\Mutation\Mutations.cs" />
     <Compile Include="GenAlg\Selection\Selection.cs" />
     <Compile Include="GenAlg\Selection\TournamentSelection.cs" />
     <Compile Include="Program.cs" />

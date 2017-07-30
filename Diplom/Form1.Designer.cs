@@ -48,6 +48,11 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.Pc = new System.Windows.Forms.NumericUpDown();
+            this.Pm = new System.Windows.Forms.NumericUpDown();
+            this.label8 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.generation = new System.Windows.Forms.NumericUpDown();
             this.tabControl1.SuspendLayout();
             this.GenAlg.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RangGen)).BeginInit();
@@ -56,6 +61,9 @@
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sizeTurnir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pc)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pm)).BeginInit();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.generation)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -70,6 +78,9 @@
             // 
             // GenAlg
             // 
+            this.GenAlg.Controls.Add(this.groupBox2);
+            this.GenAlg.Controls.Add(this.Pm);
+            this.GenAlg.Controls.Add(this.label8);
             this.GenAlg.Controls.Add(this.Pc);
             this.GenAlg.Controls.Add(this.label7);
             this.GenAlg.Controls.Add(this.groupBox1);
@@ -166,7 +177,7 @@
             this.Individ.Size = new System.Drawing.Size(65, 20);
             this.Individ.TabIndex = 6;
             this.Individ.Value = new decimal(new int[] {
-            5,
+            50,
             0,
             0,
             0});
@@ -207,7 +218,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(685, 518);
+            this.button1.Location = new System.Drawing.Point(685, 537);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(91, 44);
             this.button1.TabIndex = 1;
@@ -243,7 +254,7 @@
             // 
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.sizeTurnir);
-            this.groupBox1.Location = new System.Drawing.Point(599, 326);
+            this.groupBox1.Location = new System.Drawing.Point(604, 361);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(177, 65);
             this.groupBox1.TabIndex = 12;
@@ -303,6 +314,73 @@
             0,
             65536});
             // 
+            // Pm
+            // 
+            this.Pm.DecimalPlaces = 2;
+            this.Pm.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            131072});
+            this.Pm.Location = new System.Drawing.Point(711, 326);
+            this.Pm.Maximum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.Pm.Name = "Pm";
+            this.Pm.Size = new System.Drawing.Size(65, 20);
+            this.Pm.TabIndex = 16;
+            this.Pm.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            131072});
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(583, 326);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(117, 13);
+            this.label8.TabIndex = 15;
+            this.label8.Text = "Вероятность мутации";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.generation);
+            this.groupBox2.Controls.Add(this.radioButton1);
+            this.groupBox2.Location = new System.Drawing.Point(398, 361);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(200, 123);
+            this.groupBox2.TabIndex = 17;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Критерий остановки";
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Checked = true;
+            this.radioButton1.Location = new System.Drawing.Point(15, 34);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(81, 17);
+            this.radioButton1.TabIndex = 0;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Поколений";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // generation
+            // 
+            this.generation.Location = new System.Drawing.Point(106, 34);
+            this.generation.Name = "generation";
+            this.generation.Size = new System.Drawing.Size(64, 20);
+            this.generation.TabIndex = 1;
+            this.generation.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -321,6 +399,10 @@
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sizeTurnir)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pc)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pm)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.generation)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -347,6 +429,11 @@
         private System.Windows.Forms.NumericUpDown sizeTurnir;
         private System.Windows.Forms.NumericUpDown Pc;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.NumericUpDown Pm;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.NumericUpDown generation;
+        private System.Windows.Forms.RadioButton radioButton1;
     }
 }
 

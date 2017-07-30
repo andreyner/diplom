@@ -27,7 +27,7 @@ namespace Diplom.Gens
         /// <summary>
         /// фенотип genvalue,раскодированное значение
         /// </summary>
-        private double phenotype { get; set; }
+        private double phenotype;
         /// <summary>
         /// закодированное значение фенотипа
         /// </summary>
@@ -66,6 +66,23 @@ namespace Diplom.Gens
         /// <summary>
         /// двоичное предствление genvalue
         /// </summary>
-       public BitArray bgenvalue;
+       private BitArray bgenvalue;
+       public BitArray Bgenvalue
+       {
+            get
+            {
+                return bgenvalue;
+            }
+            set
+            {   
+                bgenvalue = value;
+                int[] array = new int[1];
+                bgenvalue.CopyTo(array, 0);
+                genvalue=array[0];
+                phenotype = ((genvalue * (xmax - xmin)) / (Math.Pow(2, length) - 1)) + xmin;
+
+            }
+        }
+
     }
 }
