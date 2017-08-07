@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Diplom.GenAlg.Gens;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,32 +11,10 @@ namespace Diplom.Gens
     /// <summary>
     /// Ген-параметр решения
     /// </summary>
-    public class Gen 
+    public class Gen:GenBase
     {
-        /// <summary>
-        /// разрядность гена
-        /// </summary>
-        public static int length;
-        /// <summary>
-        /// минимальное значение параметра
-        /// </summary>
-        public double xmin;
-        /// <summary>
-        /// максимальное значение параметра
-        /// </summary>
-       public  double xmax;
-        /// <summary>
-        /// фенотип genvalue,раскодированное значение
-        /// </summary>
-        private double phenotype;
-        /// <summary>
-        /// закодированное значение фенотипа
-        /// </summary>
-        private int genvalue;
-        /// <summary>
-        /// фенотип,раскодированное значение
-        /// </summary>
-        public double Phenotype
+      
+        public override double Phenotype
         {
             get
             {
@@ -66,8 +45,8 @@ namespace Diplom.Gens
         /// <summary>
         /// двоичное предствление genvalue
         /// </summary>
-       private BitArray bgenvalue;
-       public BitArray Bgenvalue
+       //private BitArray bgenvalue;
+       public override BitArray Bgenvalue
        {
             get
             {

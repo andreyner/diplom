@@ -51,9 +51,11 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="GenAlg\Crossover\IntegerCrossover.cs" />
+    <Compile Include="GenAlg\Crossover\RealCrossover.cs" />
     <Compile Include="GenAlg\Generation\Generator.cs" />
     <Compile Include="GenAlg\Gens\Gen.cs" />
     <Compile Include="GenAlg\Crossover\Crossovers.cs" />
+    <Compile Include="GenAlg\Gens\GenBase.cs" />
     <Compile Include="GenAlg\Individuals\Individual.cs" />
     <Compile Include="GenAlg\Mutation\Bit_Mutation.cs" />
     <Compile Include="GenAlg\Mutation\Mutations.cs" />
