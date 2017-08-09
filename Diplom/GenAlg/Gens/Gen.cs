@@ -23,6 +23,7 @@ namespace Diplom.Gens
             set
             {
                 phenotype = value;
+                
                 double notrounding = (Math.Round((phenotype - xmin) * (Math.Pow(2, Convert.ToDouble(length)) - 1)) / (xmax - xmin));
                 if (notrounding > 0)//округляем положительне числа в меньшую сторону,отицительные в большую
                 {
@@ -55,6 +56,12 @@ namespace Diplom.Gens
             set
             {   
                 bgenvalue = value;
+           //     bgenvalue = new BitArray(10);
+                //for (int i = 0; i < bgenvalue.Count; i++)
+                //{    if (i != 8)
+                //        Bgenvalue.Set(i, true);
+                //    else { Bgenvalue.Set(i, false); }
+                //}
                 int[] array = new int[1];
                 bgenvalue.CopyTo(array, 0);
                 genvalue=array[0];

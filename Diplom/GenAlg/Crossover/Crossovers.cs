@@ -1,4 +1,5 @@
-﻿using Diplom.Individuals;
+﻿using Diplom.GenAlg.Mutation;
+using Diplom.Individuals;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +15,7 @@ namespace Diplom.GenAlg
             Crossovers.Pc = Pc;
 
         }
-
+        protected Mutations Mutation;
         /// <summary>
         /// Вероятность скрещивания,от 0 до 1
         /// </summary>

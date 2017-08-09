@@ -21,6 +21,7 @@ namespace Diplom.GenAlg.Mutation
             {
                 foreach (Gen gen in individ.genes)
                 {
+                    
                     if (rnd.NextDouble() < Mutations.Pm)
                     {
                         gen.Bgenvalue.Not();

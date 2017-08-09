@@ -51,8 +51,6 @@ namespace Diplom
                 individuals = selection.selectionRun(individuals);//оценили приспособленность и отобрали для скрещивания (кроссовера)
                 Crossovers Crosover = new IntegerCrossover(1, Convert.ToDouble(Pc.Value));
                 individuals = Crosover.crossoverRun(individuals);//Запуск кроссовера(скрещиваниe)
-                Mutations Mutation = new Bit_Mutation(Convert.ToDouble(Pm.Value));
-                individuals = Mutation.runMutation(individuals);//Запуск мутации
                 individuals.Sort();
             }
 
