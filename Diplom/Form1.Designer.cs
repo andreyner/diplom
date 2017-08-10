@@ -30,6 +30,16 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.GenAlg = new System.Windows.Forms.TabPage();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.generation = new System.Windows.Forms.NumericUpDown();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.Pm = new System.Windows.Forms.NumericUpDown();
+            this.label8 = new System.Windows.Forms.Label();
+            this.Pc = new System.Windows.Forms.NumericUpDown();
+            this.label7 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.sizeTurnir = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
             this.RangGen = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
@@ -43,27 +53,17 @@
             this.button1 = new System.Windows.Forms.Button();
             this.typecoding = new System.Windows.Forms.ComboBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.sizeTurnir = new System.Windows.Forms.NumericUpDown();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.Pc = new System.Windows.Forms.NumericUpDown();
-            this.Pm = new System.Windows.Forms.NumericUpDown();
-            this.label8 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.generation = new System.Windows.Forms.NumericUpDown();
             this.tabControl1.SuspendLayout();
             this.GenAlg.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.generation)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pm)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pc)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sizeTurnir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RangGen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NGen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Individ)).BeginInit();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sizeTurnir)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Pc)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Pm)).BeginInit();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.generation)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -103,6 +103,137 @@
             this.GenAlg.TabIndex = 0;
             this.GenAlg.Text = "Генетический алгоритм";
             this.GenAlg.UseVisualStyleBackColor = true;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.generation);
+            this.groupBox2.Controls.Add(this.radioButton1);
+            this.groupBox2.Location = new System.Drawing.Point(398, 361);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(200, 123);
+            this.groupBox2.TabIndex = 17;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Критерий остановки";
+            // 
+            // generation
+            // 
+            this.generation.Location = new System.Drawing.Point(106, 34);
+            this.generation.Name = "generation";
+            this.generation.Size = new System.Drawing.Size(64, 20);
+            this.generation.TabIndex = 1;
+            this.generation.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Checked = true;
+            this.radioButton1.Location = new System.Drawing.Point(15, 34);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(81, 17);
+            this.radioButton1.TabIndex = 0;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Поколений";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // Pm
+            // 
+            this.Pm.DecimalPlaces = 2;
+            this.Pm.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            131072});
+            this.Pm.Location = new System.Drawing.Point(711, 326);
+            this.Pm.Maximum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.Pm.Name = "Pm";
+            this.Pm.Size = new System.Drawing.Size(65, 20);
+            this.Pm.TabIndex = 16;
+            this.Pm.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            131072});
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(583, 326);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(117, 13);
+            this.label8.TabIndex = 15;
+            this.label8.Text = "Вероятность мутации";
+            // 
+            // Pc
+            // 
+            this.Pc.DecimalPlaces = 2;
+            this.Pc.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            131072});
+            this.Pc.Location = new System.Drawing.Point(711, 287);
+            this.Pc.Maximum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.Pc.Name = "Pc";
+            this.Pc.Size = new System.Drawing.Size(65, 20);
+            this.Pc.TabIndex = 14;
+            this.Pc.Value = new decimal(new int[] {
+            6,
+            0,
+            0,
+            65536});
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(559, 287);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(144, 13);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "Вероятность скрещивания";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.sizeTurnir);
+            this.groupBox1.Location = new System.Drawing.Point(604, 361);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(177, 65);
+            this.groupBox1.TabIndex = 12;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Турнирный отбор";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(10, 31);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(89, 13);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "Размер турнира";
+            // 
+            // sizeTurnir
+            // 
+            this.sizeTurnir.Location = new System.Drawing.Point(105, 31);
+            this.sizeTurnir.Name = "sizeTurnir";
+            this.sizeTurnir.Size = new System.Drawing.Size(64, 20);
+            this.sizeTurnir.TabIndex = 0;
+            this.sizeTurnir.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
             // 
             // label5
             // 
@@ -214,7 +345,7 @@
             this.xmin.Name = "xmin";
             this.xmin.Size = new System.Drawing.Size(65, 20);
             this.xmin.TabIndex = 2;
-            this.xmin.Text = "-10";
+            this.xmin.Text = "0";
             // 
             // button1
             // 
@@ -250,137 +381,6 @@
             this.tabPage2.UseVisualStyleBackColor = true;
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.sizeTurnir);
-            this.groupBox1.Location = new System.Drawing.Point(604, 361);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(177, 65);
-            this.groupBox1.TabIndex = 12;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Турнирный отбор";
-            // 
-            // sizeTurnir
-            // 
-            this.sizeTurnir.Location = new System.Drawing.Point(105, 31);
-            this.sizeTurnir.Name = "sizeTurnir";
-            this.sizeTurnir.Size = new System.Drawing.Size(64, 20);
-            this.sizeTurnir.TabIndex = 0;
-            this.sizeTurnir.Value = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(10, 31);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(89, 13);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "Размер турнира";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(559, 287);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(144, 13);
-            this.label7.TabIndex = 13;
-            this.label7.Text = "Вероятность скрещивания";
-            // 
-            // Pc
-            // 
-            this.Pc.DecimalPlaces = 2;
-            this.Pc.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            131072});
-            this.Pc.Location = new System.Drawing.Point(711, 287);
-            this.Pc.Maximum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.Pc.Name = "Pc";
-            this.Pc.Size = new System.Drawing.Size(65, 20);
-            this.Pc.TabIndex = 14;
-            this.Pc.Value = new decimal(new int[] {
-            6,
-            0,
-            0,
-            65536});
-            // 
-            // Pm
-            // 
-            this.Pm.DecimalPlaces = 2;
-            this.Pm.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            131072});
-            this.Pm.Location = new System.Drawing.Point(711, 326);
-            this.Pm.Maximum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.Pm.Name = "Pm";
-            this.Pm.Size = new System.Drawing.Size(65, 20);
-            this.Pm.TabIndex = 16;
-            this.Pm.Value = new decimal(new int[] {
-            5,
-            0,
-            0,
-            131072});
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(583, 326);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(117, 13);
-            this.label8.TabIndex = 15;
-            this.label8.Text = "Вероятность мутации";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.generation);
-            this.groupBox2.Controls.Add(this.radioButton1);
-            this.groupBox2.Location = new System.Drawing.Point(398, 361);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(200, 123);
-            this.groupBox2.TabIndex = 17;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Критерий остановки";
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Checked = true;
-            this.radioButton1.Location = new System.Drawing.Point(15, 34);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(81, 17);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Поколений";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // generation
-            // 
-            this.generation.Location = new System.Drawing.Point(106, 34);
-            this.generation.Name = "generation";
-            this.generation.Size = new System.Drawing.Size(64, 20);
-            this.generation.TabIndex = 1;
-            this.generation.Value = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -392,17 +392,17 @@
             this.tabControl1.ResumeLayout(false);
             this.GenAlg.ResumeLayout(false);
             this.GenAlg.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.RangGen)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NGen)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Individ)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sizeTurnir)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Pc)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Pm)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.generation)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pm)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pc)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sizeTurnir)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RangGen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NGen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Individ)).EndInit();
             this.ResumeLayout(false);
 
         }

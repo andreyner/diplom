@@ -43,13 +43,14 @@ namespace Diplom
             }
             Generator generator = new Generator(Xmin, Xmax,Convert.ToInt32(Individ.Value), Convert.ToInt32(NGen.Value));//генерируем исходные данные
             individuals = generator.generation();//сгенерировали особей
+            List<double> temp = new List<double>();
             for (int i = 0; i < Convert.ToInt32(generation.Value); i++)
             {
 
-
+                temp.Add(individuals.Min(f => f.fitness));
                 Selection selection = new TournamentSelection(Convert.ToInt32(sizeTurnir.Value), 1);//турнирный отбор в селекции
                 individuals = selection.selectionRun(individuals);//оценили приспособленность и отобрали для скрещивания (кроссовера)
-                Crossovers Crosover = new IntegerCrossover(1, Convert.ToDouble(Pc.Value));
+                Crossovers Crosover = new IntOnePointCrossover(1, Convert.ToDouble(Pc.Value));
                 individuals = Crosover.crossoverRun(individuals);//Запуск кроссовера(скрещиваниe)
                 individuals.Sort();
             }
